@@ -1,0 +1,22 @@
+.navbar {
+  display: flex;
+  gap: 20px;
+}
+
+.list_item {
+  list-style: none;
+  &:nth-last-child(-n + 1) {
+    &::before {
+      // display: block;
+      content: "|";
+      height: 40px;
+      width: 1px;
+      color: black;
+      margin-right: 20px;
+    }
+  }
+}
+
+.link {
+  text-decoration: none;
+}
