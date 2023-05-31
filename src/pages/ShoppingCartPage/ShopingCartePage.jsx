@@ -1,3 +1,11 @@
-const  ShopingCartePage = ()=>{return <h1>ShopingCartePage</h1> }
+import OrderForm from "../../modules/OrderForm/OrderForm";
 
-export default ShopingCartePage
+const ShopingCartePage = () => {
+  return (
+    <div>
+      <OrderForm />
+    </div>
+  );
+};
+
+export default ShopingCartePage;
