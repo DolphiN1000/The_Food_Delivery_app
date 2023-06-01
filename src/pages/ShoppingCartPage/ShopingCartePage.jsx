@@ -1,9 +1,16 @@
+import { useDispatch } from "react-redux";
 import OrderForm from "../../modules/OrderForm/OrderForm";
 
 const ShopingCartePage = () => {
+  const dispatch = useDispatch()
+  // const handleOrder = (data) => {
+  //   dispatch(Order(data))
+  // }
   return (
     <div>
-      <OrderForm />
+      <OrderForm 
+      // onSubmit={handleOrder}
+      />
     </div>
   );
 };
