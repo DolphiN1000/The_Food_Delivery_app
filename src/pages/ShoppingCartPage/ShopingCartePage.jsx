@@ -1,4 +1,4 @@
-import OrderForm from "../../modules/orderForm/OrderForm";
+import OrderForm from "../../modules/OrderForm/OrderForm";
 
 const ShopingCartePage = () => {
   return (
