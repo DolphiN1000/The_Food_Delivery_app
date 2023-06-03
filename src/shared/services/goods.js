@@ -18,3 +18,8 @@ export const getGoodsById = async () => {
     const { data } = await goodsInstance.get("/:goods");
     return data;
   };
+
+  export const addOrder = async(data) => {
+    const {data: result} = await goodsInstance.post("/order", data);
+    return result;
+}
