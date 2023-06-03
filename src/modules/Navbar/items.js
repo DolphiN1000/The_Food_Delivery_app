@@ -11,6 +11,15 @@ const navItems = [
     text: "Shopping Cart",
     link: "/cart",
   },
+  // {
+  //   id: nanoid(),
+  //   text: "History",
+  //   link: "/history",
+  // }, {
+  //   id: nanoid(),
+  //   text: "Coupons",
+  //   link: "/coupons",
+  // },
 ];
 
 export default navItems;

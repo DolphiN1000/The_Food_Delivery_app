@@ -5,18 +5,26 @@
 
 .list_item {
   list-style: none;
-  &:nth-last-child(-n + 1) {
-    &::before {
+  color: black;
+
+  &:nth-last-child(n + 2) {
+    &::after {
       // display: block;
       content: "|";
       height: 40px;
       width: 1px;
       color: black;
-      margin-right: 20px;
+      margin-left: 20px;
     }
   }
 }
 
 .link {
   text-decoration: none;
+  color:indigo ;
+
+}
+
+.link:global(.active) {
+  color:indianred ;
 }
