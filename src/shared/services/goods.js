@@ -5,12 +5,12 @@ const goodsInstance = axios.create({
 });
 
 export const getAllShops = async () => {
-  const { data } = await goodsInstance.get("/Shops");
+  const { data } = await goodsInstance.get("/shops");
   return data;
 };
 
 export const getAllGoodsByIdShop = async () => {
-  const { data } = await goodsInstance.get("/:Shops");
+  const { data } = await goodsInstance.get("/shops/:shop");
   return data;
 };
 

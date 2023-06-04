@@ -1,6 +1,8 @@
 import { NavLink } from "react-router-dom";
 // import Button from "../../shared/components/Button/Button";
 import styles from "./shops.module.scss";
+import Goods from "../Goods/Goods";
+import { useState } from "react";
 
 const shop1 = {
   good1: {
@@ -112,19 +114,35 @@ const shop5 = {
     price: "40",
   },
 };
-const shops = {shop1, shop2, shop3, shop4, shop5};
+const shops = { shop1, shop2, shop3, shop4, shop5 };
 
 const Shops = () => {
-  const elements = Object.entries(shops).map(([key]) => {return(
-    <li 
-    // key={id}
-    >
+  const [activeId, setActiveId] = useState({})
+  // const onSelect = (key)=> {
+    
+  //   setActiveId(key)
+
+  // }
+  const elements = Object.entries(shops).map(( [key]) => {
+    const id = key;
+    return (
+      <li className={styles.li} key={key}>
         <NavLink className={styles.link}
-        //  to={link}
-         >{key}</NavLink>
-    </li>)
+        //  onClick={onSelect(key)} 
+         to={`/shops/${id}`}>
+          {key}
+        </NavLink>
+      </li>
+    );
   });
-  return <div className={styles.container}>{elements}</div>;
+  return (
+    <div className={styles.wrapperC}>
+      <div className={styles.container}>{elements}</div>
+      <div className={styles.container}>
+        <Goods shop={shops[activeId]} />
+      </div>
+    </div>
+  );
 };
 
 export default Shops;

@@ -1,3 +1,7 @@
+.wrapperC {
+  display: flex;
+}
+
 .container {
   display: flex;
   padding: 20px;
@@ -6,4 +10,23 @@
   border-radius: 20px;
   flex-direction: column;
   gap: 20px;
+}
+
+.li {
+  list-style: none;
+  margin: 10px;
+}
+
+.link {
+  text-decoration: none;
+  padding: 5px;
+
+  border: 1px solid black;
+  border-radius: 10px;
+  color: indigo;
+}
+
+.link:global(.active) {
+  color: indianred;
+  border: 1px solid indianred;
 }

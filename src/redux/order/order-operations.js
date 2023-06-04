@@ -15,3 +15,15 @@ export const fetchAllShops = createAsyncThunk(
     }
 )
 
+// export const fetchAllShops = createAsyncThunk(
+//     "shops/fetch-all",
+//     async(_, thunkAPI) => {
+//         try {
+//             const data = await api.getAllShops();
+//             return data;
+//         }
+//         catch({response}) {
+//             return thunkAPI.rejectWithValue(response.data);
+//         }
+//     }
+// )
